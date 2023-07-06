@@ -92,3 +92,23 @@ $ nest start :dev
 
 # HELL YEAH
 ```
+
+and I did something (creating service and entity layer to be callsed from controller).....
+
+```shell
+>>> yarn start                    :dev
+
+...
+[Nest] 48270  - 07/06/2023, 8:28:26 PM   ERROR [ExceptionHandler] Nest can't resolve dependencies of the UserService (?). Please make sure that the argument UserRepository at index [0] is available in the UserModule context.
+
+Potential solutions:
+- Is UserModule a valid NestJS module?
+- If UserRepository is a provider, is it part of the current UserModule?
+- If UserRepository is exported from a separate @Module, is that module imported within UserModule?
+  @Module({
+    imports: [ /* the Module containing UserRepository */ ]
+  })
+...
+
+# WHAT A KIND ERROR, I'll look it up later
+```
