@@ -14,4 +14,12 @@ export class UserService {
     findAllSexyUsers(): Promise<User[]> {
         return this.userRespository.find();
     }
+
+    saveAutomatedHandsomeBoy(): string {
+        // await this.userRespository.save(new User({
+        //     name: 'name1',
+        //     isHandsome: false
+        // }));
+        return 'OK';
+    }
 }

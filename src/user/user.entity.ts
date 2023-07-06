@@ -9,6 +9,6 @@ export class User {
     @Column()
     name: string;
 
-    @Column('is_handsome')
+    @Column({ name: 'is_handsome' })
     isHandSome: boolean;
 }
