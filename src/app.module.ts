@@ -4,7 +4,6 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './user/user.module';
 import { GirlsModule } from './girls/girls.module';
-;
 import { OauthModule } from './oauth/oauth.module';
 
 @Module({
@@ -18,7 +17,7 @@ TypeOrmModule.forRoot({
     database: 'testdb',
     entities: ['dist/**/*.entity{.ts,.js}'],
     synchronize: true,
-  }), UserModule, GirlsModule, OauthModule, Pass],
+  }), UserModule, GirlsModule, OauthModule],
   controllers: [AppController],
   providers: [AppService],
 })

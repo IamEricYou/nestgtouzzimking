@@ -157,4 +157,6 @@ info All dependencies
 >>> yarn add --dev @types/passport-kakao
 ```
 
+imports issue 아 증말 디펜던시 귀찮게 굽니다.........
+> [여기로][https://stackoverflow.com/questions/51124374/nest-js-cannot-resolve-dependencies-in-auth-service]
 
