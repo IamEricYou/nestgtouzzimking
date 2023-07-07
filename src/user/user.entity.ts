@@ -6,9 +6,9 @@ export class User {
     @PrimaryGeneratedColumn()
     id!: number;
 
-    @Column()
+    @Column({nullable: true})
     name: string;
 
-    @Column({ name: 'is_handsome' })
+    @Column({ name: 'is_handsome', default: false})
     isHandSome: boolean;
 }

@@ -3,9 +3,11 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './user/user.module';
+import { GirlsModule } from './girls/girls.module';
 
 @Module({
-  imports: [TypeOrmModule.forRoot({
+  imports: [GirlsModule,
+TypeOrmModule.forRoot({
     type: 'postgres',
     host: 'localhost',
     port: 5432,
@@ -14,7 +16,7 @@ import { UserModule } from './user/user.module';
     database: 'testdb',
     entities: ['dist/**/*.entity{.ts,.js}'],
     synchronize: true,
-  }), UserModule],
+  }), UserModule, GirlsModule],
   controllers: [AppController],
   providers: [AppService],
 })

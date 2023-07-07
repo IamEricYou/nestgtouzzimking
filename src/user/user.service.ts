@@ -1,7 +1,8 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from './user.entity';
 import { Repository } from 'typeorm';
+import { UzzimException } from 'src/exception/uzzim.exception';
 
 @Injectable()
 export class UserService {
@@ -15,11 +16,16 @@ export class UserService {
         return this.userRespository.find();
     }
 
-    saveAutomatedHandsomeBoy(): string {
-        // await this.userRespository.save(new User({
-        //     name: 'name1',
-        //     isHandsome: false
-        // }));
-        return 'OK';
+    async saveAutomatedHandsomeBoy(user: User): Promise<void> {
+        await this.userRespository.save(user);
+    }
+
+    async findByUserById(id: string): Promise<User> {
+        const userId: number = Number(id);
+        const user: User = await this.userRespository.findOne({ where: {
+            id: userId
+        }})
+        if ( user !== null) return user;
+        throw new UzzimException();
     }
 }
