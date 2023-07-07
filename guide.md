@@ -112,3 +112,20 @@ Potential solutions:
 
 # WHAT A KIND ERROR, I'll look it up later
 ```
+
+```js
+// user.module.ts
+@Module({
+    imports: [TypeOrmModule.forFeature([User])],
+    controllers: [UserController],
+    providers: [UserService]
+})
+
+// add those import in User Module.
+// I SHOULD LOOK UP HOW THOSE IMPORTS WORKING IN JavaScript enviornment.
+```
+
+
+## and...... let's install SWAGGER CHECK YOUR SWAGGER
+
+> npm install --save @nestjs/swagger
