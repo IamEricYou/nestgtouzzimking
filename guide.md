@@ -129,3 +129,34 @@ Potential solutions:
 ## and...... let's install SWAGGER CHECK YOUR SWAGGER
 
 > npm install --save @nestjs/swagger
+Ta-Da
+
+>localhost:3000 
+
+### Let's add some login function and authorization tooooooo API
+
+We need a library to call AAAAAAPPPPIIIII
+
+```shell
+>>> yarn add @nestjs/axios
+[1/4] 🔍  Resolving packages...
+[2/4] 🚚  Fetching packages...
+[3/4] 🔗  Linking dependencies...
+warning " > ts-loader@9.4.4" has unmet peer dependency "webpack@^5.0.0".
+warning " > @nestjs/axios@3.0.0" has unmet peer dependency "axios@^1.3.1".
+[4/4] 🔨  Building fresh packages...
+success Saved lockfile.
+success Saved 1 new dependency.
+info Direct dependencies
+└─ @nestjs/axios@3.0.0
+info All dependencies
+└─ @nestjs/axios@3.0.0
+✨  Done in 11.62s.
+
+>>> yarn add passport-kakao
+>>> yarn add --dev @types/passport-kakao
+```
+
+imports issue 아 증말 디펜던시 귀찮게 굽니다.........
+> [여기로][https://stackoverflow.com/questions/51124374/nest-js-cannot-resolve-dependencies-in-auth-service]
+
