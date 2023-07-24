@@ -3,6 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { User } from './user.entity';
 import { Repository } from 'typeorm';
 import { UzzimException } from 'src/exception/uzzim.exception';
+import { checkArrIsEmpty } from 'src/util/util';
 
 @Injectable()
 export class UserService {
@@ -27,5 +28,17 @@ export class UserService {
         }})
         if ( user !== null) return user;
         throw new UzzimException();
+    }
+
+    async findByUserName(username: string): Promise<User | null> {
+        const userArr: User[] = await this.userRespository.find({
+            where: {
+                name: username,
+            },
+        });
+        if (checkArrIsEmpty(userArr)) { 
+            return null;
+        }
+        return userArr[0];
     }
 }
