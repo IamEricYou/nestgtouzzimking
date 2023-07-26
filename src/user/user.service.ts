@@ -30,7 +30,7 @@ export class UserService {
         throw new UzzimException();
     }
 
-    async findByUserName(username: string): Promise<User | null> {
+    async findByUserName(username: string): Promise<User | null > {
         const userArr: User[] = await this.userRespository.find({
             where: {
                 name: username,
